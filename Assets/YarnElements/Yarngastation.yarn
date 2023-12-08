@@ -1,0 +1,41 @@
+﻿title: YarnGasstation_1
+tags:
+---
+<<declare $visitedCubeOne = false as bool>>
+<<declare $visitedCube2 = false as bool>>
+
+//<<Set_Audio_To_NPC_One LipSync>>
+<<if $visitedCubeOne is false>>
+
+Hello How do you do? What type of gasoline would you like?  #line:persondialogue1
+
+-> Petrol #line:08820cf 
+    <<jump Petrol>>
+-> Diesel  #line:008c192 
+    <<jump Diesel>>
+ 
+<<endif>>
+===
+
+title: Diesel
+tag:
+---
+
+oh yeah sure! May I know How much to be filled? #line:persondialogue2 
+
+-> 1 liter   #line:0f0659b 
+-> 2 liter   #line:04c0050 
+-> Tank Full  #line:0f3d0bf 
+Thank You! Please Visit again #line:persondialogue4
+===
+
+title: Petrol
+tag:
+---
+That's Fantastic. May I know How much to be filled? #line:persondialogue3
+
+-> 1 liter   #line:0fb885b 
+-> 2 liter   #line:0da3661 
+-> Tank Full  #line:0b138c2 
+Thank You! Please Visit again #line:persondialogue5
+===
